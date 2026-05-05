@@ -39,16 +39,11 @@ export function Header() {
         </button>
         <div>
           <h1 className="text-lg font-semibold text-slate-900">
-            {viewTitles[activeView] || 'AR Invoice Tracker'}
+            {viewTitles[activeView] || 'MIT AR Tracker'}
           </h1>
-          <div className="hidden sm:block mt-0.5">
-            <img
-              src="/mannai-logo.svg"
-              alt="Mannai Corporation"
-              className="h-4 w-auto"
-              style={{ filter: 'brightness(0) saturate(100%) invert(40%) sepia(0%) saturate(0%) hue-rotate(0deg)' }}
-            />
-          </div>
+          <p className="text-xs text-slate-500 hidden sm:block">
+            Mannai Infotech · Accounts Receivable
+          </p>
         </div>
       </div>
 
