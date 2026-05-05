@@ -103,14 +103,19 @@ export function Sidebar() {
         )}
       >
         {/* Logo */}
-        <div className="flex items-center gap-3 px-4 py-5 border-b border-slate-700/50">
-          <div className="w-8 h-8 rounded-lg gradient-primary flex items-center justify-center flex-shrink-0">
-            <span className="text-white font-bold text-sm">M</span>
-          </div>
-          {sidebarOpen && (
-            <div className="animate-fade-in overflow-hidden">
-              <p className="font-bold text-sm leading-tight">MIT AR Tracker</p>
-              <p className="text-xs text-slate-400">Mannai Infotech</p>
+        <div className="flex items-center px-4 py-4 border-b border-slate-700/50 min-h-[64px]">
+          {sidebarOpen ? (
+            <div className="animate-fade-in w-full">
+              <img
+                src="/mannai-logo.svg"
+                alt="Mannai Corporation"
+                className="h-9 w-auto object-contain"
+              />
+              <p className="text-xs text-slate-400 mt-1 tracking-wide">AR Invoice Tracker</p>
+            </div>
+          ) : (
+            <div className="w-8 h-8 rounded-lg gradient-primary flex items-center justify-center flex-shrink-0 mx-auto">
+              <span className="text-white font-bold text-sm">M</span>
             </div>
           )}
         </div>

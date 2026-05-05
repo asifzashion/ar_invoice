@@ -26,12 +26,16 @@ export function LoginPage() {
       <div className="w-full max-w-4xl relative">
         {/* Header */}
         <div className="text-center mb-10">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl gradient-primary shadow-xl shadow-blue-900/40 mb-4">
-            <span className="text-white font-bold text-2xl">M</span>
+          <div className="flex justify-center mb-5">
+            <img
+              src="/mannai-logo.svg"
+              alt="Mannai Corporation"
+              className="h-14 w-auto object-contain"
+            />
           </div>
-          <h1 className="text-3xl font-bold text-white mb-2">MIT AR Tracker</h1>
+          <h1 className="text-3xl font-bold text-white mb-2">AR Invoice Tracker</h1>
           <p className="text-slate-400 text-lg">
-            Mannai Infotech · Accounts Receivable Management
+            Accounts Receivable Management System
           </p>
         </div>
 
@@ -111,7 +115,7 @@ export function LoginPage() {
         </div>
 
         <p className="text-center text-slate-500 text-xs mt-4">
-          MIT AR Tracker v1.0 · Powered by React + Camunda 8 BPMN
+          AR Invoice Tracker v1.0 · Powered by React + Camunda 8 BPMN
         </p>
       </div>
     </div>
