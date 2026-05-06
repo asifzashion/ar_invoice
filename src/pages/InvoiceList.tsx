@@ -99,7 +99,7 @@ export function InvoiceList() {
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
-              className="rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500"
             >
               {STATUS_OPTIONS.map((o) => (
                 <option key={o.value} value={o.value}>
@@ -176,11 +176,11 @@ export function InvoiceList() {
                 filtered.map((inv) => (
                   <tr
                     key={inv.invoiceNumber}
-                    className="hover:bg-blue-50/30 transition-colors cursor-pointer"
+                    className="hover:bg-slate-50/50 transition-colors cursor-pointer"
                     onClick={() => setActiveView(`invoice-${inv.invoiceNumber}`)}
                   >
                     <td className="px-4 py-3.5">
-                      <span className="font-mono font-semibold text-blue-700 text-xs">
+                      <span className="font-mono font-semibold text-slate-800 text-xs">
                         {inv.invoiceNumber}
                       </span>
                     </td>
@@ -227,7 +227,7 @@ export function InvoiceList() {
                     </td>
                     <td className="px-4 py-3.5">
                       <button
-                        className="p-1.5 rounded-lg hover:bg-blue-100 text-slate-400 hover:text-blue-600 transition-colors"
+                        className="p-1.5 rounded-lg hover:bg-slate-100 text-slate-400 hover:text-slate-700 transition-colors"
                         onClick={(e) => {
                           e.stopPropagation();
                           setActiveView(`invoice-${inv.invoiceNumber}`);

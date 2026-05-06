@@ -73,7 +73,12 @@
   }
 }
 
-/* Custom scrollbar */
+/* ── Override Tailwind blue-600 with Mannai brand color ── */
+@layer base {
+  :root {
+    --color-blue-600: #2c4070;
+  }
+}
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -108,7 +113,7 @@
 
 /* Gradient backgrounds */
 .gradient-primary {
-  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
 }
 .gradient-success {
   background: linear-gradient(135deg, #065f46 0%, #10b981 100%);

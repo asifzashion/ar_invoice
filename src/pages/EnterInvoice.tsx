@@ -225,7 +225,7 @@ export function EnterInvoice() {
     return (
       <>
         {text.slice(0, idx)}
-        <span className="text-blue-600 font-bold">{text.slice(idx, idx + query.length)}</span>
+        <span className="text-slate-800 font-bold">{text.slice(idx, idx + query.length)}</span>
         {text.slice(idx + query.length)}
       </>
     );
@@ -292,7 +292,7 @@ export function EnterInvoice() {
                       }}
                       onFocus={() => invoiceNum && setShowSuggestions(true)}
                       onKeyDown={handleKeyDown}
-                      className="w-full rounded-lg border border-slate-300 bg-white pl-10 pr-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                      className="w-full rounded-lg border border-slate-300 bg-white pl-10 pr-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:border-slate-500 transition-colors"
                       autoComplete="off"
                     />
 
@@ -318,7 +318,7 @@ export function EnterInvoice() {
                                   onClick={() => handleSuggestionClick(num)}
                                   className={`w-full text-left px-4 py-2.5 flex items-center gap-3 transition-colors ${
                                     isActive
-                                      ? 'bg-blue-50'
+                                      ? 'bg-slate-100'
                                       : 'hover:bg-slate-50'
                                   }`}
                                 >
@@ -375,8 +375,8 @@ export function EnterInvoice() {
                     }}
                     className={`font-mono text-xs px-2.5 py-1 rounded-lg border transition-colors ${
                       fetched?.invoiceNumber === num
-                        ? 'bg-blue-600 text-white border-blue-600'
-                        : 'bg-slate-100 hover:bg-blue-100 hover:text-blue-700 hover:border-blue-300 text-slate-600 border-slate-200'
+                        ? 'bg-slate-900 text-white border-slate-900'
+                        : 'bg-slate-100 hover:bg-slate-200 hover:text-slate-900 hover:border-slate-400 text-slate-600 border-slate-200'
                     }`}
                   >
                     {num}
@@ -452,9 +452,9 @@ export function EnterInvoice() {
                     </div>
                   </div>
                 ) : (
-                  <div className="bg-blue-50 border border-blue-100 rounded-xl p-4">
-                    <p className="text-xs text-blue-600 font-medium mb-1.5">What happens next?</p>
-                    <ul className="text-xs text-blue-700 space-y-1">
+                  <div className="bg-slate-50 border border-slate-200 rounded-xl p-4">
+                    <p className="text-xs text-slate-700 font-medium mb-1.5">What happens next?</p>
+                    <ul className="text-xs text-slate-600 space-y-1">
                       <li>✓ Invoice will be added to the AR tracking system</li>
                       <li>✓ Camunda 8 BPMN workflow will be started</li>
                       <li>✓ AR Submission Team will be notified via email</li>

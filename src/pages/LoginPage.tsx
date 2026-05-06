@@ -16,11 +16,11 @@ export function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl" />
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-slate-700/20 rounded-full blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-slate-600/20 rounded-full blur-3xl" />
       </div>
 
       <div className="w-full max-w-4xl relative">
@@ -47,7 +47,7 @@ export function LoginPage() {
               key={f.label}
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center"
             >
-              <div className="text-blue-400 flex justify-center mb-2">{f.icon}</div>
+              <div className="text-slate-300 flex justify-center mb-2">{f.icon}</div>
               <p className="text-white text-sm font-medium">{f.label}</p>
               <p className="text-slate-400 text-xs mt-0.5">{f.desc}</p>
             </div>
@@ -71,7 +71,7 @@ export function LoginPage() {
                   onClick={() => setSelected(user.id)}
                   className={`flex items-center gap-3 p-4 rounded-xl border-2 text-left transition-all duration-150 ${
                     isSelected
-                      ? 'border-blue-400 bg-blue-500/20 shadow-lg shadow-blue-900/30'
+                      ? 'border-slate-400 bg-slate-700/30 shadow-lg shadow-slate-900/30'
                       : 'border-white/10 bg-white/5 hover:border-white/30 hover:bg-white/10'
                   }`}
                 >
@@ -85,7 +85,7 @@ export function LoginPage() {
                     </span>
                   </div>
                   {isSelected && (
-                    <div className="ml-auto w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0">
+                    <div className="ml-auto w-5 h-5 rounded-full bg-slate-600 flex items-center justify-center flex-shrink-0">
                       <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                         <path
                           fillRule="evenodd"

@@ -56,7 +56,7 @@ export function DataManagement() {
       <Card>
         <CardBody className="py-3">
           <div className="flex items-start gap-2.5">
-            <Info size={16} className="text-blue-500 flex-shrink-0 mt-0.5" />
+            <Info size={16} className="text-slate-500 flex-shrink-0 mt-0.5" />
             <div className="text-sm text-slate-600">
               <p className="font-medium text-slate-800 mb-1">Expected Excel Format</p>
               <div className="grid grid-cols-2 gap-x-6 gap-y-0.5 text-xs text-slate-500">
@@ -71,7 +71,7 @@ export function DataManagement() {
                   ['Column H', 'PM Name'],
                 ].map(([col, label]) => (
                   <div key={col} className="flex gap-2">
-                    <span className="font-mono text-blue-600 font-medium">{col}</span>
+                    <span className="font-mono text-slate-800 font-medium">{col}</span>
                     <span>{label}</span>
                   </div>
                 ))}
@@ -94,8 +94,8 @@ export function DataManagement() {
             onClick={() => fileRef.current?.click()}
             className={`border-2 border-dashed rounded-xl p-10 text-center cursor-pointer transition-all duration-200 ${
               dragging
-                ? 'border-blue-400 bg-blue-50'
-                : 'border-slate-300 hover:border-blue-400 hover:bg-slate-50'
+                ? 'border-slate-500 bg-slate-50'
+                : 'border-slate-300 hover:border-slate-500 hover:bg-slate-50'
             }`}
           >
             <input
@@ -107,7 +107,7 @@ export function DataManagement() {
             />
             <FileSpreadsheet
               size={40}
-              className={`mx-auto mb-3 ${dragging ? 'text-blue-500' : 'text-slate-400'}`}
+              className={`mx-auto mb-3 ${dragging ? 'text-slate-600' : 'text-slate-400'}`}
             />
             <p className="font-semibold text-slate-700 mb-1">
               {dragging ? 'Drop to upload' : 'Drag & drop your Excel file here'}
@@ -120,8 +120,8 @@ export function DataManagement() {
           </div>
 
           {uploading && (
-            <div className="mt-4 flex items-center gap-2 text-sm text-blue-600">
-              <div className="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin" />
+            <div className="mt-4 flex items-center gap-2 text-sm text-slate-700">
+              <div className="w-4 h-4 border-2 border-slate-700 border-t-transparent rounded-full animate-spin" />
               Parsing Excel file...
             </div>
           )}
@@ -159,8 +159,8 @@ export function DataManagement() {
               <p className="text-2xl font-bold text-slate-900">{invoices.length}</p>
               <p className="text-xs text-slate-500 mt-0.5">Active Invoices</p>
             </div>
-            <div className="p-4 bg-blue-50 rounded-xl">
-              <p className="text-2xl font-bold text-blue-700">{excelCount}</p>
+            <div className="p-4 bg-slate-100 rounded-xl">
+              <p className="text-2xl font-bold text-slate-800">{excelCount}</p>
               <p className="text-xs text-slate-500 mt-0.5">Excel Records</p>
             </div>
             <div className="p-4 bg-emerald-50 rounded-xl">

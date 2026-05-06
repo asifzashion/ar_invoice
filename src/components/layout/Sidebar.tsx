@@ -130,7 +130,7 @@ export function Sidebar() {
                     className={cn(
                       'w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-150',
                       isActive
-                        ? 'bg-blue-600 text-white shadow-lg shadow-blue-900/30'
+                        ? 'bg-slate-900 text-white shadow-lg shadow-slate-900/30'
                         : 'text-slate-400 hover:text-white hover:bg-slate-800'
                     )}
                     title={!sidebarOpen ? item.label : undefined}

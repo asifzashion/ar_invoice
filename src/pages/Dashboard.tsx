@@ -90,9 +90,9 @@ export function Dashboard() {
       label: 'Total Invoices',
       value: stats.total,
       icon: <FileText size={22} />,
-      gradient: 'from-blue-500 to-blue-600',
-      bg: 'bg-blue-50',
-      text: 'text-blue-600',
+      gradient: 'from-slate-700 to-slate-900',
+      bg: 'bg-slate-100',
+      text: 'text-slate-700',
     },
     {
       label: 'Pending Verification',
@@ -107,8 +107,8 @@ export function Dashboard() {
       value: stats.pendingSubmission,
       icon: <Send size={22} />,
       gradient: 'from-indigo-500 to-indigo-600',
-      bg: 'bg-indigo-50',
-      text: 'text-indigo-600',
+      bg: 'bg-slate-50',
+      text: 'text-slate-600',
     },
     {
       label: 'Overdue Follow-ups',
@@ -240,7 +240,7 @@ export function Dashboard() {
                     name === 'amount' ? 'Balance Due' : 'Invoices',
                   ]}
                 />
-                <Bar dataKey="invoices" fill="#3b82f6" radius={[4, 4, 0, 0]} name="invoices" />
+                <Bar dataKey="invoices" fill="#0f172a" radius={[4, 4, 0, 0]} name="invoices" />
               </BarChart>
             </ResponsiveContainer>
           </CardBody>
@@ -316,7 +316,7 @@ export function Dashboard() {
                       {item.action}
                     </p>
                     <div className="flex items-center gap-1.5 mt-1">
-                      <span className="font-mono text-xs text-blue-600">
+                      <span className="font-mono text-xs text-slate-700 font-semibold">
                         #{item.invoiceNumber}
                       </span>
                       <span className="text-slate-300">·</span>

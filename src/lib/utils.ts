@@ -74,15 +74,15 @@ export const statusConfig: Record<
   },
   verified: {
     label: 'Verified',
-    color: 'text-blue-700',
-    bg: 'bg-blue-50 border-blue-200',
-    dot: 'bg-blue-500',
+    color: 'text-slate-700',
+    bg: 'bg-slate-100 border-slate-300',
+    dot: 'bg-slate-600',
   },
   submitted: {
     label: 'Submitted',
-    color: 'text-indigo-700',
-    bg: 'bg-indigo-50 border-indigo-200',
-    dot: 'bg-indigo-500',
+    color: 'text-slate-800',
+    bg: 'bg-slate-200 border-slate-400',
+    dot: 'bg-slate-700',
   },
   in_followup: {
     label: 'In Follow-up',
@@ -109,7 +109,7 @@ export const roleConfig: Record<
   { label: string; color: string; bg: string }
 > = {
   admin: { label: 'Account Admin', color: 'text-purple-700', bg: 'bg-purple-100' },
-  ar_team: { label: 'AR Submission Team', color: 'text-blue-700', bg: 'bg-blue-100' },
+  ar_team: { label: 'AR Submission Team', color: 'text-slate-700', bg: 'bg-slate-100' },
   cmd_team: { label: 'CMD Finance', color: 'text-emerald-700', bg: 'bg-emerald-100' },
   bu_team: { label: 'Business Unit', color: 'text-orange-700', bg: 'bg-orange-100' },
   viewer: { label: 'Viewer (PM/Ops)', color: 'text-slate-700', bg: 'bg-slate-100' },
