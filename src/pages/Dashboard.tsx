@@ -143,17 +143,17 @@ export function Dashboard() {
   return (
     <div className="space-y-6 animate-fade-in">
       {/* Welcome banner */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-6 text-white shadow-lg shadow-blue-200">
+      <div className="bg-gradient-to-r from-[#2c4070] to-[#3a5490] rounded-2xl p-6 text-white shadow-lg shadow-slate-300">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-xl font-bold">
+            <h2 className="text-xl font-bold text-white">
               Good morning, {currentUser?.name.split(' ')[0]} 👋
             </h2>
-            <p className="text-blue-100 mt-1 text-sm">
+            <p className="text-slate-200 mt-1 text-sm">
               Here's your AR overview for today · {new Date().toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}
             </p>
           </div>
-          <div className="hidden sm:flex items-center gap-2 bg-white/20 rounded-xl px-4 py-2">
+          <div className="hidden sm:flex items-center gap-2 bg-white/10 rounded-xl px-4 py-2">
             <TrendingUp size={18} />
             <span className="text-sm font-medium">
               {formatCurrency(
