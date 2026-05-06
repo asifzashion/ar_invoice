@@ -28,10 +28,15 @@ import { Avatar } from '../components/ui/Avatar';
 import { Badge } from '../components/ui/Badge';
 import { formatCurrency, formatDate, timeAgo, getDaysLateLabel } from '../lib/utils';
 import { BRAND_COLORS, STATUS_COLORS, TOOLTIP_STYLE, GRID_COLOR, AXIS_STYLE } from '../lib/chartTheme';
+import { mockUsers } from '../data/mockData';
 import type { InvoiceStatus } from '../types';
 
 export function Dashboard() {
   const { invoices, activity, setActiveView, currentUser } = useStore();
+
+  // Helper: look up avatar src by actor name
+  const getActorAvatar = (actorName: string) =>
+    mockUsers.find((u) => u.name === actorName)?.avatar;
 
   // Stats
   const stats = {
@@ -293,7 +298,7 @@ export function Dashboard() {
             {activity.slice(0, 10).map((item) => (
               <div key={item.id} className="px-4 py-3 hover:bg-slate-50/50">
                 <div className="flex items-start gap-2.5">
-                  <Avatar name={item.actor} size="sm" />
+                  <Avatar name={item.actor} src={getActorAvatar(item.actor)} size="sm" />
                   <div className="min-w-0 flex-1">
                     <p className="text-xs text-slate-700 leading-snug">
                       <span className="font-medium">{item.actor}</span>{' '}

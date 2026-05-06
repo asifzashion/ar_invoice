@@ -30,6 +30,7 @@ import {
   getDaysLateLabel,
   roleConfig,
 } from '../lib/utils';
+import { mockUsers } from '../data/mockData';
 import type { InvoiceStatus, SubmissionChannel } from '../types';
 import { camundaService } from '../lib/camundaMock';
 
@@ -69,6 +70,9 @@ export function InvoiceDetail({ invoiceNumber }: InvoiceDetailProps) {
 
   const invoice = getInvoice(invoiceNumber);
   const { setActiveView } = useStore();
+
+  // Helper: look up avatar by name
+  const getAvatar = (name: string) => mockUsers.find((u) => u.name === name)?.avatar;
 
   const [commentText, setCommentText] = useState('');
   const [showVerifyModal, setShowVerifyModal] = useState(false);
@@ -367,7 +371,7 @@ export function InvoiceDetail({ invoiceNumber }: InvoiceDetailProps) {
               ) : (
                 invoice.comments.map((comment) => (
                   <div key={comment.id} className="flex gap-3">
-                    <Avatar name={comment.author} size="sm" />
+                    <Avatar name={comment.author} src={getAvatar(comment.author)} size="sm" />
                     <div className="flex-1 bg-slate-50 rounded-xl p-3">
                       <div className="flex items-center gap-2 mb-1">
                         <span className="text-sm font-semibold text-slate-800">
@@ -391,7 +395,7 @@ export function InvoiceDetail({ invoiceNumber }: InvoiceDetailProps) {
               {/* Add comment */}
               {currentUser?.role !== 'viewer' && (
                 <div className="flex gap-3 pt-2 border-t border-slate-100">
-                  <Avatar name={currentUser?.name || ''} size="sm" />
+                  <Avatar name={currentUser?.name || ''} src={getAvatar(currentUser?.name || '')} size="sm" />
                   <div className="flex-1 space-y-2">
                     <Textarea
                       placeholder="Add a comment..."
