@@ -11,13 +11,13 @@ export const BRAND_COLORS = [
 
 // Status colours — all in brand palette tones
 export const STATUS_COLORS: Record<string, string> = {
-  pending_verification: '#8fa5c8', // light brand — pending
-  rejected:             '#1a2a4a', // very dark brand — rejected
+  pending_verification: '#c8d8ec', // very light brand — clearly distinct from on_hold
+  rejected:             '#1a2a4a', // very dark brand
   verified:             '#2c4070', // primary brand
   submitted:            '#3d5490', // mid-dark brand
   in_followup:          '#4e68b0', // mid brand
   resolved:             '#6b85b0', // lighter brand
-  on_hold:              '#a8bbd4', // lightest brand
+  on_hold:              '#8fa5c8', // noticeably darker than pending
 };
 
 // Shared tooltip style
