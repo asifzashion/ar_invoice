@@ -83,7 +83,7 @@ export function Analytics() {
           { label: 'Total AR Balance', value: formatCurrency(totalBalance),   sub: `${invoices.length} invoices`,                                                                                    color: 'text-[#2c4070]', bg: 'bg-[#2c4070]/10' },
           { label: 'Overdue Balance',  value: formatCurrency(overdueBalance), sub: `${invoices.filter((i) => (i.daysLate||0)>0 && i.status!=='resolved').length} invoices`,                          color: 'text-red-600',   bg: 'bg-red-50' },
           { label: 'Resolved',         value: `${resolvedCount}`,             sub: `${Math.round((resolvedCount / invoices.length) * 100)}% of total`,                                               color: 'text-emerald-600', bg: 'bg-emerald-50' },
-          { label: 'Avg Days Late',    value: `${Math.round(avgDaysLate)}d`,  sub: 'For overdue invoices',                                                                                           color: 'text-orange-600', bg: 'bg-orange-50' },
+          { label: 'Avg Days Late', value: `${Math.round(avgDaysLate)}d`, sub: 'For overdue invoices', color: 'text-[#2c4070]', bg: 'bg-[#2c4070]/10' },
         ].map((kpi) => (
           <Card key={kpi.label}>
             <CardBody className="p-4">
@@ -219,7 +219,7 @@ export function Analytics() {
                   <td className="px-4 py-3">
                     <span className={`text-xs px-2 py-0.5 rounded-full font-medium border ${
                       inv.status==='resolved'   ? 'bg-emerald-50 text-emerald-700 border-emerald-200' :
-                      inv.status==='in_followup'? 'bg-orange-50 text-orange-700 border-orange-200' :
+                      inv.status==='in_followup'? 'bg-[#2c4070]/10 text-[#2c4070] border-[#2c4070]/30' :
                                                   'bg-slate-50 text-slate-600 border-slate-200'
                     }`}>
                       {inv.status.replace(/_/g, ' ')}

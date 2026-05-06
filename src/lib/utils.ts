@@ -86,9 +86,9 @@ export const statusConfig: Record<
   },
   in_followup: {
     label: 'In Follow-up',
-    color: 'text-orange-700',
-    bg: 'bg-orange-50 border-orange-200',
-    dot: 'bg-orange-500',
+    color: 'text-[#2c4070]',
+    bg: 'bg-[#2c4070]/10 border-[#2c4070]/30',
+    dot: 'bg-[#4e68b0]',
   },
   resolved: {
     label: 'Resolved',
@@ -111,7 +111,7 @@ export const roleConfig: Record<
   admin: { label: 'Account Admin', color: 'text-purple-700', bg: 'bg-purple-100' },
   ar_team: { label: 'AR Submission Team', color: 'text-slate-700', bg: 'bg-slate-100' },
   cmd_team: { label: 'CMD Finance', color: 'text-emerald-700', bg: 'bg-emerald-100' },
-  bu_team: { label: 'Business Unit', color: 'text-orange-700', bg: 'bg-orange-100' },
+  bu_team: { label: 'Business Unit', color: 'text-[#2c4070]', bg: 'bg-[#2c4070]/10' },
   viewer: { label: 'Viewer (PM/Ops)', color: 'text-slate-700', bg: 'bg-slate-100' },
 };
 

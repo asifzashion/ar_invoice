@@ -15,7 +15,7 @@ export const STATUS_COLORS: Record<string, string> = {
   rejected:             '#ef4444',
   verified:             '#2c4070',
   submitted:            '#3d5490',
-  in_followup:          '#f97316',
+  in_followup:          '#4e68b0',
   resolved:             '#10b981',
   on_hold:              '#94a3b8',
 };

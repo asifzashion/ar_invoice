@@ -17,7 +17,7 @@ const PRIORITY_CONFIG = {
 const TASK_TYPE_CONFIG = {
   verification: { label: 'Verification', icon: '🔍', color: 'text-blue-600', bg: 'bg-blue-50' },
   submission: { label: 'Submission', icon: '📤', color: 'text-indigo-600', bg: 'bg-indigo-50' },
-  followup: { label: 'Follow-up', icon: '📋', color: 'text-orange-600', bg: 'bg-orange-50' },
+  followup:     { label: 'Follow-up', icon: '📋', color: 'text-[#2c4070]', bg: 'bg-[#2c4070]/10' },
   bu_action: { label: 'BU Action', icon: '⚙️', color: 'text-purple-600', bg: 'bg-purple-50' },
 };
 
@@ -53,7 +53,7 @@ export function MyAssignments() {
         {[
           { label: 'Total Tasks', value: stats.total, icon: <ClipboardList size={20} />, color: 'text-blue-600', bg: 'bg-blue-50' },
           { label: 'High Priority', value: stats.high, icon: <AlertTriangle size={20} />, color: 'text-red-600', bg: 'bg-red-50' },
-          { label: 'Overdue', value: stats.overdue, icon: <Clock size={20} />, color: 'text-orange-600', bg: 'bg-orange-50' },
+          { label: 'Overdue', value: stats.overdue, icon: <Clock size={20} />, color: 'text-[#2c4070]', bg: 'bg-[#2c4070]/10' },
         ].map((s) => (
           <Card key={s.label}>
             <CardBody className="p-4 flex items-center gap-3">
