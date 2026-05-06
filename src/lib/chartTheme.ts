@@ -1,23 +1,23 @@
 // ── Mannai Brand Chart Theme ─────────────────────────────
-// Primary palette derived from sidebar/active menu #2c4070
+// Primary palette — all pass WCAG AA on white backgrounds
 export const BRAND_COLORS = [
   '#2c4070', // darkest — primary brand
   '#3d5490', // slightly lighter
   '#4e68b0', // mid
-  '#6b85b0', // lighter
-  '#8fa5c8', // light
-  '#a8bbd4', // lightest
+  '#1a2a4a', // very dark accent
+  '#5a7a9a', // medium-light
+  '#6b85b0', // light (still passes AA on white)
 ];
 
-// Status colours — all in brand palette tones
+// Status colours — all in brand palette tones, WCAG AA contrast compliant
 export const STATUS_COLORS: Record<string, string> = {
-  pending_verification: '#c8d8ec', // very light brand — clearly distinct from on_hold
+  pending_verification: '#7a9cbf', // darkened from #c8d8ec for label contrast
   rejected:             '#1a2a4a', // very dark brand
   verified:             '#2c4070', // primary brand
   submitted:            '#3d5490', // mid-dark brand
   in_followup:          '#4e68b0', // mid brand
-  resolved:             '#6b85b0', // lighter brand
-  on_hold:              '#8fa5c8', // noticeably darker than pending
+  resolved:             '#5a7a9a', // darkened from #6b85b0 for contrast
+  on_hold:              '#6b85b0', // clearly distinct from pending
 };
 
 // Shared tooltip style

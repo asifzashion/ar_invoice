@@ -182,7 +182,7 @@ export function Sidebar() {
         {/* Toggle button */}
         <button
           onClick={() => setSidebarOpen(!sidebarOpen)}
-          className="absolute -right-3 top-20 w-6 h-6 bg-slate-700 border border-slate-600 rounded-full flex items-center justify-center text-slate-300 hover:text-white hover:bg-slate-600 transition-colors shadow-md"
+          className="absolute -right-3 top-20 w-6 h-6 bg-[#2c4070] border border-[#1e3060] rounded-full flex items-center justify-center text-white hover:bg-[#3d5490] transition-colors shadow-md"
         >
           {sidebarOpen ? <ChevronLeft size={12} /> : <ChevronRight size={12} />}
         </button>

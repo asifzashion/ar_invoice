@@ -32,7 +32,7 @@ export function Header() {
       <div className="flex items-center gap-4">
         <button
           onClick={() => setSidebarOpen(!sidebarOpen)}
-          className="p-2 rounded-lg hover:bg-white/10 text-white/70 hover:text-white lg:hidden transition-colors"
+          className="p-2 rounded-lg hover:bg-white/10 text-white/80 hover:text-white lg:hidden transition-colors"
         >
           <Menu size={20} />
         </button>
@@ -40,7 +40,7 @@ export function Header() {
           <h1 className="text-lg font-semibold text-white leading-tight">
             {viewTitles[activeView] || 'MIT AR Tracker'}
           </h1>
-          <p className="text-xs text-white/60 hidden sm:block">
+          <p className="text-xs text-white/80 hidden sm:block">
             Mannai Infotech · Accounts Receivable
           </p>
         </div>
@@ -53,7 +53,7 @@ export function Header() {
         <div className="relative">
           <button
             onClick={() => setShowNotifications(!showNotifications)}
-            className="relative p-2 rounded-lg hover:bg-white/10 text-white/70 hover:text-white transition-colors"
+            className="relative p-2 rounded-lg hover:bg-white/10 text-white/80 hover:text-white transition-colors"
           >
             <Bell size={20} />
             {userTasks.length > 0 && (
@@ -93,11 +93,11 @@ export function Header() {
               <p className="text-sm font-medium text-white leading-tight">
                 {currentUser.name.split(' ')[0]}
               </p>
-              <p className="text-xs text-white/60">
+              <p className="text-xs text-white/80">
                 {roleConfig[currentUser.role].label}
               </p>
             </div>
-            <ChevronDown size={14} className="text-white/60" />
+            <ChevronDown size={14} className="text-white/80" />
           </button>
 
           {showUserMenu && (

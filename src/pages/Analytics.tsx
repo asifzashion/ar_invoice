@@ -91,7 +91,7 @@ export function Analytics() {
                 {kpi.label}
               </div>
               <p className="text-2xl font-bold text-slate-900">{kpi.value}</p>
-              <p className="text-xs text-slate-400 mt-0.5">{kpi.sub}</p>
+              <p className="text-xs text-slate-600 mt-0.5">{kpi.sub}</p>
             </CardBody>
           </Card>
         ))}
@@ -148,7 +148,7 @@ export function Analytics() {
           <CardHeader><h3 className="font-semibold text-slate-900">Submission Channels</h3></CardHeader>
           <CardBody>
             {channelData.length === 0 ? (
-              <div className="h-48 flex items-center justify-center text-slate-400 text-sm">
+              <div className="h-48 flex items-center justify-center text-slate-600 text-sm">
                 No submissions yet
               </div>
             ) : (

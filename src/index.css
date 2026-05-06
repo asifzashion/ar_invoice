@@ -68,9 +68,17 @@
 
   p {
     font-size: 16px;
-    color: #232531;
     line-height: 1.5em;
   }
+
+  p:not([class*="text-"]) {
+    color: #232531;
+  }
+
+  h1:not([class*="text-"]) { color: #404040; }
+  h2:not([class*="text-"]) { color: #404040; }
+  h3:not([class*="text-"]) { color: #404040; }
+  h4:not([class*="text-"]) { color: #404040; }
 }
 
 /* ── Override Tailwind blue-600 with Mannai brand color ── */
