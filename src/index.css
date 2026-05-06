@@ -34,6 +34,43 @@
     color: hsl(var(--foreground));
     font-family: "Frutiger Neue W01", "Segoe UI", "Open Sans", Arial, sans-serif;
   }
+
+  h1 {
+    font-size: 32px;
+    color: #404040;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2em;
+  }
+
+  h2 {
+    font-size: 24px;
+    color: #404040;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.3em;
+  }
+
+  h3 {
+    font-size: 18px;
+    color: #404040;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 1.4em;
+  }
+
+  h4 {
+    font-size: 16px;
+    color: #404040;
+    font-weight: 600;
+    line-height: 1.4em;
+  }
+
+  p {
+    font-size: 16px;
+    color: #232531;
+    line-height: 1.5em;
+  }
 }
 
 /* Custom scrollbar */
