@@ -27,17 +27,8 @@ import { StatusBadge } from '../components/ui/StatusBadge';
 import { Avatar } from '../components/ui/Avatar';
 import { Badge } from '../components/ui/Badge';
 import { formatCurrency, formatDate, timeAgo, getDaysLateLabel } from '../lib/utils';
+import { BRAND_COLORS, STATUS_COLORS, TOOLTIP_STYLE, GRID_COLOR, AXIS_STYLE } from '../lib/chartTheme';
 import type { InvoiceStatus } from '../types';
-
-const STATUS_COLORS: Record<string, string> = {
-  pending_verification: '#f59e0b',
-  rejected: '#ef4444',
-  verified: '#3b82f6',
-  submitted: '#6366f1',
-  in_followup: '#f97316',
-  resolved: '#10b981',
-  on_hold: '#94a3b8',
-};
 
 export function Dashboard() {
   const { invoices, activity, setActiveView, currentUser } = useStore();
@@ -202,17 +193,10 @@ export function Dashboard() {
                     <Cell key={index} fill={entry.color} />
                   ))}
                 </Pie>
-                <Tooltip
-                  formatter={(value, name) => [value, name]}
-                  contentStyle={{ borderRadius: '8px', border: '1px solid #e2e8f0' }}
-                />
-                <Legend
-                  iconType="circle"
-                  iconSize={8}
-                  formatter={(value) => (
-                    <span className="text-xs text-slate-600">{value}</span>
-                  )}
-                />
+                <Tooltip contentStyle={TOOLTIP_STYLE} formatter={(value, name) => [value, name]} />
+                <Legend iconType="circle" iconSize={8} formatter={(value) => (
+                  <span style={{ fontSize: 11, color: '#64748b' }}>{value}</span>
+                )} />
               </PieChart>
             </ResponsiveContainer>
           </CardBody>
@@ -226,21 +210,21 @@ export function Dashboard() {
           <CardBody>
             <ResponsiveContainer width="100%" height={240}>
               <BarChart data={customerData} margin={{ top: 5, right: 10, left: -20, bottom: 5 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
-                <XAxis
-                  dataKey="customer"
-                  tick={{ fontSize: 11, fill: '#64748b' }}
-                  tickLine={false}
-                />
-                <YAxis tick={{ fontSize: 11, fill: '#64748b' }} tickLine={false} axisLine={false} />
+                <CartesianGrid strokeDasharray="3 3" stroke={GRID_COLOR} />
+                <XAxis dataKey="customer" tick={AXIS_STYLE} tickLine={false} />
+                <YAxis tick={AXIS_STYLE} tickLine={false} axisLine={false} />
                 <Tooltip
-                  contentStyle={{ borderRadius: '8px', border: '1px solid #e2e8f0' }}
+                  contentStyle={TOOLTIP_STYLE}
                   formatter={(value, name) => [
                     name === 'amount' ? formatCurrency(Number(value)) : value,
                     name === 'amount' ? 'Balance Due' : 'Invoices',
                   ]}
                 />
-                <Bar dataKey="invoices" fill="#0f172a" radius={[4, 4, 0, 0]} name="invoices" />
+                <Bar dataKey="invoices" radius={[4, 4, 0, 0]} name="Invoices">
+                  {customerData.map((_, index) => (
+                    <Cell key={index} fill={BRAND_COLORS[index % BRAND_COLORS.length]} />
+                  ))}
+                </Bar>
               </BarChart>
             </ResponsiveContainer>
           </CardBody>
