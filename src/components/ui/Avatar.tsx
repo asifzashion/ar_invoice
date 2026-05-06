@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import { cn, getInitials } from '../../lib/utils';
 
 interface AvatarProps {
   name: string;
+  src?: string;           // optional image URL
   size?: 'sm' | 'md' | 'lg';
   className?: string;
 }
@@ -13,13 +15,13 @@ const sizeClasses = {
 };
 
 const colors = [
-  'bg-blue-500',
+  'bg-[#2c4070]',
   'bg-emerald-500',
   'bg-purple-500',
   'bg-[#4e68b0]',
   'bg-pink-500',
   'bg-teal-500',
-  'bg-indigo-500',
+  'bg-[#3d5490]',
   'bg-rose-500',
 ];
 
@@ -31,18 +33,33 @@ function getColor(name: string): string {
   return colors[Math.abs(hash) % colors.length];
 }
 
-export function Avatar({ name, size = 'md', className }: AvatarProps) {
+export function Avatar({ name, src, size = 'md', className }: AvatarProps) {
+  const [imgError, setImgError] = useState(false);
+
+  const showImage = src && !imgError;
+
   return (
     <div
       className={cn(
-        'rounded-full flex items-center justify-center text-white font-semibold flex-shrink-0',
+        'rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden',
         sizeClasses[size],
-        getColor(name),
+        !showImage && getColor(name),
         className
       )}
       title={name}
     >
-      {getInitials(name)}
+      {showImage ? (
+        <img
+          src={src}
+          alt={name}
+          className="w-full h-full object-cover rounded-full"
+          onError={() => setImgError(true)}
+        />
+      ) : (
+        <span className="text-white font-semibold select-none">
+          {getInitials(name)}
+        </span>
+      )}
     </div>
   );
 }

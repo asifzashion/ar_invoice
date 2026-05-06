@@ -93,7 +93,7 @@ export function Header() {
             onClick={() => setShowUserMenu(!showUserMenu)}
             className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100 transition-colors"
           >
-            <Avatar name={currentUser.name} size="sm" />
+            <Avatar name={currentUser.name} src={currentUser.avatar} size="sm" />
             <div className="hidden sm:block text-left">
               <p className="text-sm font-medium text-slate-800 leading-tight">
                 {currentUser.name.split(' ')[0]}
@@ -124,7 +124,7 @@ export function Header() {
                     }}
                     className="w-full text-left px-4 py-2 text-sm hover:bg-slate-50 text-slate-700 flex items-center gap-2"
                   >
-                    <Avatar name={user.name} size="sm" />
+                    <Avatar name={user.name} src={user.avatar} size="sm" />
                     <div>
                       <p className="font-medium">{user.name}</p>
                       <p className="text-xs text-slate-500">

@@ -1,12 +1,12 @@
 import type { Invoice, CamundaTask, ActivityItem, User } from '../types';
 
 export const mockUsers: User[] = [
-  { id: '1', name: 'Ahmed Al-Rashid', email: 'admin@mannai.com', role: 'admin' },
-  { id: '2', name: 'Jim Fernandez', email: 'jim@mannai.com', role: 'cmd_team' },
-  { id: '3', name: 'Tony Mathew', email: 'tony@mannai.com', role: 'ar_team' },
-  { id: '4', name: 'Ibrahim Hassan', email: 'ibrahim@mannai.com', role: 'ar_team' },
-  { id: '5', name: 'Sajid Ahmed Syed', email: 'sajid@mannai.com', role: 'bu_team' },
-  { id: '6', name: 'Pradeep Thomas', email: 'pradeep@mannai.com', role: 'viewer' },
+  { id: '1', name: 'Ahmed Al-Rashid',       email: 'admin@mannai.com',   role: 'admin',    avatar: 'https://i.pravatar.cc/150?img=11' },
+  { id: '2', name: 'Jim Fernandez',          email: 'jim@mannai.com',     role: 'cmd_team', avatar: 'https://i.pravatar.cc/150?img=52' },
+  { id: '3', name: 'Tony Mathew',            email: 'tony@mannai.com',    role: 'ar_team',  avatar: 'https://i.pravatar.cc/150?img=33' },
+  { id: '4', name: 'Ibrahim Hassan',         email: 'ibrahim@mannai.com', role: 'ar_team',  avatar: 'https://i.pravatar.cc/150?img=59' },
+  { id: '5', name: 'Sajid Ahmed Syed',       email: 'sajid@mannai.com',   role: 'bu_team',  avatar: 'https://i.pravatar.cc/150?img=15' },
+  { id: '6', name: 'Pradeep Thomas',         email: 'pradeep@mannai.com', role: 'viewer',   avatar: 'https://i.pravatar.cc/150?img=68' },
 ];
 
 export const mockInvoices: Invoice[] = [

@@ -75,7 +75,7 @@ export function LoginPage() {
                       : 'border-white/10 bg-white/5 hover:border-white/30 hover:bg-white/10'
                   }`}
                 >
-                  <Avatar name={user.name} size="md" />
+                  <Avatar name={user.name} src={user.avatar} size="md" />
                   <div className="min-w-0">
                     <p className="text-white font-medium text-sm truncate">{user.name}</p>
                     <span

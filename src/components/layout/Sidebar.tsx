@@ -159,7 +159,7 @@ export function Sidebar() {
         {/* User info */}
         <div className="border-t border-slate-700/50 p-3">
           <div className="flex items-center gap-3">
-            <Avatar name={currentUser.name} size="sm" />
+            <Avatar name={currentUser.name} src={currentUser.avatar} size="sm" />
             {sidebarOpen && (
               <div className="flex-1 min-w-0 animate-fade-in">
                 <p className="text-sm font-medium text-white truncate">
