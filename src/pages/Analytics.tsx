@@ -22,7 +22,7 @@ export function Analytics() {
   ).map(([name, value]) => ({
     name,
     value,
-    color: STATUS_COLORS[name.toLowerCase().replace(/ /g, '_')] || '#94a3b8',
+    color: STATUS_COLORS[name.toLowerCase().replace(/ /g, '_')] || '#a8bbd4',
   }));
 
   // ── Customer balance ─────────────────────────────────

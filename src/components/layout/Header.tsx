@@ -38,7 +38,7 @@ export function Header() {
           <Menu size={20} />
         </button>
         <div>
-          <h1 className="text-lg font-semibold text-slate-900">
+          <h1 className="text-lg font-semibold text-white" style={{color: '#fff'}}>
             {viewTitles[activeView] || 'MIT AR Tracker'}
           </h1>
           <p className="text-xs text-slate-500 hidden sm:block">

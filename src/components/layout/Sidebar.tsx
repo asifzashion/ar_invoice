@@ -109,7 +109,7 @@ export function Sidebar() {
           </div>
           {sidebarOpen && (
             <div className="animate-fade-in overflow-hidden">
-              <p className="font-bold text-sm leading-tight">MIT AR Tracker</p>
+              <p className="font-bold text-sm leading-tight text-white">MIT AR Tracker</p>
               <p className="text-xs text-slate-400">Mannai Infotech</p>
             </div>
           )}

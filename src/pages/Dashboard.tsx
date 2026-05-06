@@ -57,7 +57,7 @@ export function Dashboard() {
   const pieData = Object.entries(statusCounts).map(([status, count]) => ({
     name: status.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
     value: count,
-    color: STATUS_COLORS[status] || '#94a3b8',
+    color: STATUS_COLORS[status] || '#a8bbd4',
   }));
 
   // Customer bar chart
